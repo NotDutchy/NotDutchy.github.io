@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background: #5FAACC;
+    color: white;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.navbar a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #5FAACC;
+}
+
+.home {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
