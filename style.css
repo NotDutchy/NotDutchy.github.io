@@ -47,10 +47,13 @@ body {
     display: flex;
     height: 100vh;
     align-items: center;
+    right: auto;
 }
 
-.home-content{
-    position: relative;
+.projects {
+    display: flex;
+    height: 100vh;
+    align-items: center;
 }
 
 .contact {
@@ -78,4 +81,5 @@ img.photo {
     position: relative;
     border-radius: 60%;
     left: 700px;
+
 }
