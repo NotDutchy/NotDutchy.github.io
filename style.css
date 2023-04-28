@@ -48,3 +48,34 @@ body {
     height: 100vh;
     align-items: center;
 }
+
+.home-content{
+    position: relative;
+}
+
+.contact {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.contact a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+img.photo {
+    position: relative;
+    border-radius: 60%;
+    left: 700px;
+}
