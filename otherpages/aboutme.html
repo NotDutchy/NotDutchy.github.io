@@ -17,19 +17,69 @@
             </nav>
         </header>
 
-        <section class="projects">
-            <h1>
-                Welcome to my projects page!
-            </h1>
+        <section class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="../Foto.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p> Hello, I am Richard Elean</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Programming in C#</span><br>Gamedevelopment</li>
+                                <li><span>English Proficiency</span><br>Proficient in proffesional English</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2021</span><br>During my Computer Science study I took part in different projects</li>
+                                <li><span>2023</span><br>Internship at HoppenBrouwers Techniek</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2021-Current</span><br>Studying Computer Science at Avans Hogeschool Breda</li>
+                                <li><span>2012-2018</span><br>Higher General Continued Education at Markland College Zevenbergen</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <footer class="contact" id="contact">
             <nav class="contact-content">
-                <a href="#" class="logo">Contact me on: </a>
+                <a href="#" class="logo">Contact me: </a>
                 <a>Email</a>
                 <a>Phone</a>
                 <a href="https://www.linkedin.com/in/richard-elean-notdutchy/" target="_blank">LinkedIn</a>
             </nav>
         </footer>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                } 
+                
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
     </body>
 </html>
