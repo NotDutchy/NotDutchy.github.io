@@ -10,16 +10,45 @@
     <header class="header">
         <a href="#" class="logo">NotDutchy</a>
         <nav class="navbar">
-            <a href="#home" class="active">Home</a>
+            <a href="../index.html">Home</a>
             <a href="../otherpages/aboutme.html">About Me</a>
             <a href="../otherpages/projects.html">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <section class="home" id="home">
-
-    </section>
+    <div class="Quizteling">
+        <div class="Quizteling-video">
+            <video controls src="../videos/quizteling/Expositie Slideshow.mp4" type="mp4"></video>
+        </div>
+        <div class="Quizteling-text">
+            <h1 class="sub-title">Project Quizteling</h1>
+            <p> During this project we worked on a mobile experience for a fictional amusement park. The experience had
+                to include different aspects of our whole first year. This includes UML Diagrams, Hardware interfacing
+                and the MQTT protocol.
+                I created an android application that takes players through different parts of the park by asking them
+                different questions that can sometimes only be answered by going to specific parts of the park.
+                <br> We ended up creating a simple game of simon says. We 3D printed a set of owls that had LEDs in their eyes. The ESP32 would open a door and light up a random pair of eyes. The ESP would then send the correct answer that lit up to the MQTT broker so that the player can enter the correct answer.<br>
+            </p>
+            <a href="https://github.com/Mxndarijn/EsstelingB2.git" target="_blank"><br> Source code </a>
+        </div>
+        <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('Concepts')">Concepts</p>
+            <p class="tab-links" onclick="opentab('My contribution')">My contribution</p>
+        </div>
+        
+        <div class="tab-contents active-tab" id="Concepts">
+            <ul>
+                <li><span>Programming in Java</span><br>This project introduced me to programming android applications. This was all done in Java. In my second year  </li>
+                <li><span>MQTT</span><br>This project made use of an ESP32. We were required to make use of the MQTT protocol somewhere within our project. </li>
+            </ul>
+        </div>
+        <div class="tab-contents" id="My contribution">
+            <ul>
+                <li><span>MQTT</span><br>One of the more importants parts that I did during this project was figuring out the MQTT process. We had to create both an android application that is able to sent and receive information from the server. But also we need the ESP32 to be able to receive and send information.</li>
+            </ul>
+        </div>
+    </div>
 
     <footer class="contact" id="contact">
         <nav class="contact-content">
@@ -29,7 +58,22 @@
             <a href="https://www.linkedin.com/in/richard-elean-notdutchy/" target="_blank">LinkedIn</a>
         </nav>
     </footer>
-</body>
+    </body>
 
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 
 </html>

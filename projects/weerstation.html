@@ -10,16 +10,56 @@
     <header class="header">
         <a href="#" class="logo">NotDutchy</a>
         <nav class="navbar">
-            <a href="#home" class="active">Home</a>
+            <a href="../index.html">Home</a>
             <a href="../otherpages/aboutme.html">About Me</a>
             <a href="../otherpages/projects.html">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <section class="home" id="home">
-
-    </section>
+    <div class="weerstation">
+        <div class="container">
+            <div class="row">
+                <div class="weerstation-col-1">
+                    <video controls class="video" src="../videos/weerstation/Weerstation_23TIVT1A2_Backupfilmpje (1).mkv"
+                        type="mkv"></video>
+                </div>
+                <div class="weerstation-col-2">
+                    <h1 class="sub-title">Project Weerstation</h1>
+                    <p> During this project we worked in groups of 5-6 students and were tasked to get data from a local
+                        database. This data came from a Weatherstation on the roof of the schoolbuilding.
+                        We had to convert these values into values that were common in the Netherlands (Fahrenheit >
+                        Celcius). As this was our first project, it taught us how to think like programmers on a basic
+                        level
+                        and introduced us to algorithms. <br> <br> In the video to the left, you can see our finished
+                        product. We built in a menu on the bottom display. Navigation is done by using the buttons on
+                        the bottom. <br> <br> Sadly during this project we did not use git or Github yet. The source
+                        code is downloadable via the link below.
+                    </p>
+                    <a href="../zips/Weerstation.zip" download><br> Download source code </a>
+                </div>
+            </div>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('Concepts')">Concepts</p>
+                <p class="tab-links" onclick="opentab('My contribution')">My contribution</p>
+            </div>
+            <div class="tab-contents active-tab" id="Concepts">
+                <ul>
+                    <li><span>Programming in Java</span><br>As this was our first project as Computer Science students. We started from the very basics with programming in Java. 
+                    We learned to think like programmers and started learning algorithms. We also learned some basic general knowledge like converting values from different metric systems to others.</li>
+                    <li><span>Algorithms</span><br>As mentioned in the point above, we learned some basic algorithms and made our own to display the values. I used a program called LARP to visualize the different algorithms. Sadly this program was rather out of date and was very annoying to use.</li>  
+                    <li><span>Working with other people</span><br>I also learned to work in groups. This is essential for Computer Engineers as later during employment projects are also mostly done in groups. </li>  
+                </ul>
+            </div>
+            <div class="tab-contents" id="My contribution">
+                <ul>
+                    <li><span>Most Rainrate</span><br>Near the end of the project each student was required to make their own algorithm. There were a couple of different statistics to chooce from. I ended up determining the which month had the higher rain rate. I had to write my own algorithm to determine which month had the highest amount of rain.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
 
     <footer class="contact" id="contact">
         <nav class="contact-content">
@@ -29,6 +69,22 @@
             <a href="https://www.linkedin.com/in/richard-elean-notdutchy/" target="_blank">LinkedIn</a>
         </nav>
     </footer>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 </body>
 
 

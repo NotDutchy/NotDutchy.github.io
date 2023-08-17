@@ -10,16 +10,73 @@
     <header class="header">
         <a href="#" class="logo">NotDutchy</a>
         <nav class="navbar">
-            <a href="#home" class="active">Home</a>
+            <a href="../index.html">Home</a>
             <a href="../otherpages/aboutme.html">About Me</a>
             <a href="../otherpages/projects.html">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <section class="home" id="home">
+    <div class="Boebot">
+        <div class="container">
+            <div class="video-list">
+                <div class="Boebot-video">
+                    <video controls src="../videos/boebot/Bijna correcte route over grid.mp4" type="mp4"></video>
+                </div>
+                <div class="Boebot-video">
+                    <video controls src="../videos/boebot/Oppakken en rijden met object.MOV" type="MOV"></video>
+                </div>
+                <div class="Boebot-video">
+                    <video controls src="../videos/boebot/Rijden over 1 lijn.MOV" type="MOV"></video>
+                </div>
+                <div class="Boebot-video">
+                    <video controls src="../videos/boebot/Rijden over een grid waarbij het wel werkt.mp4"
+                        type="mp4"></video>
+                </div>
+                <div class="Boebot-video">
+                    <video controls src="../videos/boebot/Rijden via een bluetooth verbinding met putty.mp4"
+                        type="mp4"></video>
+                </div>
+                <div class="Boebot-video">
+                    <video controls src="../videos/boebot/Route over grid.mp4" type="mp4"></video>
+                </div>
+                <div class="Boebot-video">
+                    <video controls src="../videos/boebot/Voelspriet obstakel detectie.mp4" type="mp4"></video>
+                </div>
+            </div>
+            <div class="fullscreen">
+                <p> Double click on a video to open it in full screen</p>
+            </div>
+        </div>
+    </div>
 
-    </section>
+    <div class="Boebot-text">
+        <h1 class="sub-title">Project Boebot</h1>
+        <p> During this project we worked in groups of 5-6 students and were tasked to create a self-driving robot. This was by interfacing with different sensors and using actuators to adjust the behavior of the robot.
+            I also created a small GUI that communicates via a bluetooth module on the robot to send commands, aswell as a TV remote that send signals via infrared. This project built further upon the basics I learned in my first project.
+            Here I used interfaces and started learning about design patterns. I used 3 layers to separate different parts of the software. 
+            <br> <br> Sadly during this project we did not use git or Github yet. The source
+            code is downloadable via the link below.
+        </p>
+        <a href="../zips/Boebot.zip" download><br> Download source code </a>
+
+        <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('Concepts')">Concepts</p>
+            <p class="tab-links" onclick="opentab('My contribution')">My contribution</p>
+        </div>
+        <div class="tab-contents active-tab" id="Concepts">
+            <ul>
+                <li><span>Programming in Java</span><br>This project built further upon the different aspects of beginner programming. We started utilizing interfaces and software architecture patterns to seperate parts of our code. </li>
+                <li><span>UML Diagrams</span><br>During this project we also learned how to read and make UML Diagrams. </li>
+                <li><span>Design patterns</span><br>We learned several design patterns how we could write better readable and upgradeable code.</li>
+            </ul>
+        </div>
+        <div class="tab-contents" id="My contribution">
+            <ul>
+                <li><span>GUI</span><br>For this project there was no seperate individual assignment. I however opted to create the GUI that was used for the bluetooth communication.</li>
+            </ul>
+        </div>
+    </div>
 
     <footer class="contact" id="contact">
         <nav class="contact-content">
@@ -29,6 +86,22 @@
             <a href="https://www.linkedin.com/in/richard-elean-notdutchy/" target="_blank">LinkedIn</a>
         </nav>
     </footer>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 </body>
 
 
