@@ -17,9 +17,54 @@
         </nav>
     </header>
 
-    <section class="home" id="home">
-
-    </section>
+    <div class="remote-healthcare">
+        <div class="container">
+            <div class="row">
+                <div class="remote-images">
+                    <div class="image">
+                        <img src="../images/PatientGUIRemote.png"
+                            alt="The window a patient sees when they are logged in.">
+                    </div>
+                    <div class="image">
+                        <img src="../images/DokterGUIRemote.png"
+                            alt="The window a doctor sees when they are logged in.">
+                    </div>
+                    <div class="image">
+                        <img src="../images/VRWorldRemoteHealthcare.png"
+                            alt="The VR world a patient is able to see during a training session.">
+                    </div>
+                </div>
+                <div class="remote-text">
+                    <h1 class="sub-title">
+                        Project Remote Healthcare
+                    </h1>
+                    <p>
+                        For this project I had to create our own server and client system. This was all done in C#. On the left are some screenshots of the end results of the GUI's. The doctor and patient are able to talk to each other via the chat. The goal was to allow the patient to do remote excersises on a bike and send over the data to the doctor. To make the experience more immersive we also created a VR world. The last screenshot is a blank VR world that we edited into something more realistic. Sadly I can't find any old screenshot of our world, so I can't show that off.
+                        <br>
+                        The source code is accesible via the link below.
+                        <br> <br>
+                        <a href="https://github.com/Somfic/2.1-Remote-Healthcare.git" link> Source Code</a>
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Concepts')">Concepts</p>
+                        <p class="tab-links" onclick="opentab('My contribution')">My contribution</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Concepts">
+                        <ul>
+                            <li><span>Programming in C#</span><br>As this was my first project in C#, it was easy to grasp because it is rather similar to Java. We needed to setup our own server and client system to be able to commmunicate with the doctor or patients. </li>
+                            <li><span>Network protocol</span><br>For this project we needed to create our own network protocol to communicate between our clients and our server. </li>
+                            <li><span>MVVM</span><br>During this project I learned another design pattern called MVVM.</li>
+                    </div>
+                    <div class="tab-contents" id="My contribution">
+                        <ul>
+                            <li><span>MVVM GUI</span><br>One of my jobs during this project was figuring out how to make the GUI's. We used the MVVM pattern for our GUI structure. This makes it easy to separate logic from data objects. This way data can be edited without having to acces the GUI class itself.</li>
+                            <li><span>VR Engine</span><br>Another part I did during this project was figuring out how to change the VR world in the engine.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="contact" id="contact">
         <nav class="contact-content">
@@ -29,6 +74,25 @@
             <a href="https://www.linkedin.com/in/richard-elean-notdutchy/" target="_blank">LinkedIn</a>
         </nav>
     </footer>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            } 
+            
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
 </body>
 
 
